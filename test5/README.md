@@ -64,7 +64,7 @@ select count(*) from orders;
 select MyPack.Get_SaleAmount(11) AS 部门11应收金额,MyPack.Get_SaleAmount(12) AS 部门12应收金额 from dual;
 ```
 效果如图：<br>
-![](https://github.com/ZYQHZ/ORACLE/blob/master/test5/1.PNG)
+![](https://github.com/ZYQHZ/ORACLE/blob/master/test5/2.PNG)
 4.测试函数Get_Employees()，要求输入参数是员工号，输出员工的ID,姓名，销售总金额：<br>
 首先修改创建包和包主体代码为：
 ```
@@ -111,5 +111,6 @@ create or replace PACKAGE BODY MyPack IS
 END MyPack;
 ```
 效果如图：<br>
-![](https://github.com/ZYQHZ/ORACLE/blob/master/test5/1.PNG)
+![](https://github.com/ZYQHZ/ORACLE/blob/master/test5/3.PNG)
 5.由于订单只是按日期分区的，上述统计是全表搜索，因此统计速度会比较慢，如何提高统计的速度呢？
+用索引提高效率;分区技术。
